@@ -1,0 +1,24 @@
+{
+  "name": "storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 10001 -s ./public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "8.1.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "5.3.18",
+    "@storybook/addon-knobs": "5.3.18",
+    "@storybook/addon-viewport": "5.3.18",
+    "@storybook/react": "5.3.18",
+    "storybook-addon-paddings": "2.0.2"
+  }
+}
