@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 10001 -s ./public"
+    "storybook": "start-storybook -p 10001 -s ./public",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "@storybook/addon-knobs": "5.3.18",
     "@storybook/addon-viewport": "5.3.18",
     "@storybook/react": "5.3.18",
+    "@storybook/storybook-deployer": "2.8.5",
     "storybook-addon-paddings": "2.0.2"
   }
 }
