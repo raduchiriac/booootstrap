@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { text, boolean, number, radios } from "@storybook/addon-knobs";
 
 import Button from "../Button";
+import Badge from "../Badge";
 
 const roles = {
   Primary: "primary",
@@ -38,7 +39,9 @@ storiesOf("Buttons", module).add("Button (...props)", () => {
       <hr />
       <Button
         id="my-button-storybook"
+        data-mytag="surprise"
         href={text("Link", "")}
+        classes="ml-4"
         target={radios("Target", targets, "_self")}
         text={text("Text", "I am a pretty button")}
         active={boolean("Active", false)}
@@ -52,6 +55,17 @@ storiesOf("Buttons", module).add("Button (...props)", () => {
           alert("hello");
         }}
       />
+      <hr />
+      <Button>
+        <Badge
+          id="my-badge-storybook"
+          data-mytag="surprise"
+          classes="ml-2"
+          text="9"
+          role="light"
+          srText="9 unread messages"
+        />
+      </Button>
     </Fragment>
   );
 });

@@ -1,9 +1,23 @@
+// rafcp
+
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-// TODO: If there is a href use:
-
-const Button = ({ id, role, text, type, disabled, size, onClick, href, outlined, block, active, target }) => {
+const Button = ({
+  role,
+  text,
+  type,
+  disabled,
+  size,
+  onClick,
+  href,
+  outlined,
+  block,
+  active,
+  classes,
+  children,
+  ...rest
+}) => {
   const _role = (outlined && " btn-outline-" + role) || " btn-" + role;
   const _size = (!!size && " btn-" + size) || "";
   const _block = (block && " btn-block") || "";
@@ -20,13 +34,12 @@ const Button = ({ id, role, text, type, disabled, size, onClick, href, outlined,
   }, [active]);
 
   const props = {
-    id,
-    target,
     onClick,
     disabled: stateDisabled,
     "aria-disabled": stateDisabled ? "true" : null,
     "aria-pressed": stateActive ? "true" : "false",
-    className: `btn${_role}${_size}${_block}${stateActive ? " active" : ""}`,
+    className: `btn${_role}${_size}${_block}${stateActive ? " active" : ""}${(classes && " " + classes) || ""}`,
+    ...rest,
   };
 
   if (role == "link" && !!href) {
@@ -42,7 +55,12 @@ const Button = ({ id, role, text, type, disabled, size, onClick, href, outlined,
   } else if (type == "reset") {
     return <input type="reset" value={text} {...props}></input>;
   } else {
-    return <button {...props}>{text}</button>;
+    return (
+      <button {...props}>
+        {text}
+        {children}
+      </button>
+    );
   }
 };
 Button.propTypes = {
