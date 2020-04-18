@@ -15,7 +15,7 @@ const roles = {
   Dark: "dark",
 };
 
-storiesOf("Badges", module).add("Badge (...props)", () => {
+storiesOf("Components", module).add("Badge (...props)", () => {
   return (
     <Fragment>
       <Badge />

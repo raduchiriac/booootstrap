@@ -32,7 +32,7 @@ const targets = {
   Blank: "_blank",
 };
 
-storiesOf("Buttons", module).add("Button (...props)", () => {
+storiesOf("Components", module).add("Button (...props)", () => {
   return (
     <Fragment>
       <Button />
