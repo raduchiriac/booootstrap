@@ -1,5 +1,5 @@
 {
-  "name": "GSC",
+  "name": "gsc",
   "private": true,
   "description": "",
   "version": "0.1.0",
@@ -11,15 +11,25 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "storybook": "start-storybook -p 10001 -s ./public",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "gatsby": "2.20.24",
+    "babel-loader": "8.1.0",
+    "gatsby": "2.21.33",
     "gatsby-source-strapi": "0.0.12",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "prettier": "2.0.4"
+    "@storybook/addon-a11y": "5.3.18",
+    "@storybook/addon-knobs": "5.3.18",
+    "@storybook/addon-viewport": "5.3.18",
+    "@storybook/react": "5.3.18",
+    "@storybook/storybook-deployer": "2.8.6",
+    "storybook-addon-paddings": "2.0.2",
+    "prettier": "2.0.5"
   }
 }

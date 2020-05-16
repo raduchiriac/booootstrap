@@ -1,5 +1,5 @@
 ## Booootstrap
-
+Custom Bootstrap 5 with Strapi (as a headless CMS) and Gatsby (as a static-site-generator)
 
 ### Layout
 ### Content
